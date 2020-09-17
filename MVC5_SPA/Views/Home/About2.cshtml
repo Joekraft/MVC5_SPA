@@ -1,23 +1,24 @@
 ﻿@using Kendo.Mvc.UI
 
 @{
-    ViewBag.Title = "SPA and Layout";
+    ViewBag.Title = "Layout Only";
 }
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
 <br />
 <p>This screen is setup like QTestPad, with a control that is defined and then referenced in custom bundled javascript.</p>
-<p>However we are not experiencing the same issue, both SPA and Layout work fine..</p>
+<p>A js error occurs here in SPA (navigating from another page) since the TextBox's onChange event is called within AboutScript, which has not yet initialised.</p>
 <br />
-
 
 @(Html.Kendo().DatePicker()
               .Name("datepicker")
               .Value("01/01/2011")
               .HtmlAttributes(new { style = "width: 100%", title = "datepicker" }))
 
+@(Html.Kendo().TextBox()
+    .Name("textbox")
+    .Events(e => e.Change("textboxOnChange")))
 
-@Scripts.Render("~/bundles/About2")
 
-
+@Scripts.Render("~/bundles/AboutScript")

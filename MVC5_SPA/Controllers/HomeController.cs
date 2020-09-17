@@ -33,6 +33,12 @@ namespace MVC5_SPA.Controllers
 
             return View();
         }
+        public ActionResult About4()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
 
         public ActionResult Contact()
         {

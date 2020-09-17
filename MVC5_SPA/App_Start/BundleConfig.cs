@@ -23,10 +23,10 @@ namespace MVC5_SPA
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/kendo.all").Include(
-                      "~/Scripts/kendo.all.min.js"));
+                      "~/Scripts/kendo/2020.3.915/kendo.all.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/kendo.aspnetmvc").Include(
-                      "~/Scripts/kendo.aspnetmvc.min.js"));
+                      "~/Scripts/kendo/2020.3.915/kendo.aspnetmvc.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/spa").Include(
                       "~/Scripts/spa.js"));
@@ -38,8 +38,8 @@ namespace MVC5_SPA
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
 
-            bundles.Add(new ScriptBundle("~/bundles/About2").Include(
-                      "~/Scripts/about2.js"));
+            bundles.Add(new ScriptBundle("~/bundles/AboutScript").Include(
+                      "~/Scripts/about-script.js"));
         }
     }
 }

@@ -835,7 +835,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\about2.js" />
+    <Content Include="Scripts\about-script.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\kendo\2020.3.915\razor\Url.cshtml" />
@@ -1414,8 +1414,6 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\kendo.all.min.js" />
-    <Content Include="Scripts\kendo.aspnetmvc.min.js" />
     <Content Include="Scripts\kendo\2020.3.915\angular.min.js" />
     <Content Include="Scripts\kendo\2020.3.915\cultures\kendo.culture.aa-DJ.min.js" />
     <Content Include="Scripts\kendo\2020.3.915\cultures\kendo.culture.aa-ER.min.js" />
@@ -3593,6 +3591,7 @@
     <Content Include="Scripts\kendo\2020.3.915\cultures\kendo.culture.aa-ER.min.js.map" />
     <Content Include="Scripts\kendo\2020.3.915\cultures\kendo.culture.aa-DJ.min.js.map" />
     <Content Include="Views\Home\About2.cshtml" />
+    <Content Include="Views\Home\About4.cshtml" />
     <Content Include="Views\Home\About3.cshtml" />
   </ItemGroup>
   <ItemGroup>

@@ -8,18 +8,24 @@
 
 <br />
 <p>This screen works with SPA and Layout</p>
-<br/>
+<br />
 
 @(Html.Kendo().DatePicker()
               .Name("datepicker")
               .Value("01/01/2011")
               .HtmlAttributes(new { style = "width: 100%", title = "datepicker" }))
 
+@(Html.Kendo().TextBox()
+    .Name("textbox"))
+
 <script type="text/javascript">
     $(document).ready(function () {
         console.warn("About Document Ready");
         var datepicker = $("#datepicker").data("kendoDatePicker");
         datepicker.value(new Date(2022, 02, 02));
+
+        var textbox = $("#textbox").data("kendoTextBox");
+        textbox.value("value changed!");
     });
 </script>
 
