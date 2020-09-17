@@ -1,0 +1,33 @@
+﻿@using Kendo.Mvc.UI
+
+@{
+    ViewBag.Title = "SPA only";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<br />
+<p>This will work with SPA, but not Layout - since document.ready() is called before the kendo deferred scripts have been initialised.</p>
+<p>If we moved DeferredScripts() above the document.ready() it'll work for both a SPA and Layout refresh.</p>
+<br />
+
+@(Html.Kendo().DatePicker()
+              .Name("datepicker")
+              .Value("01/01/2011")
+              .HtmlAttributes(new { style = "width: 100%", title = "datepicker" })
+              .Deferred())
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        console.warn("About3 Document Ready");
+        var datepicker = $("#datepicker").data("kendoDatePicker");
+        datepicker.value(new Date(2022, 02, 02));
+    });
+</script>
+
+<script>
+    console.warn("Deferred Start");
+</script>
+@Html.Kendo().DeferredScripts()
+
+

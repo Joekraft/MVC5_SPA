@@ -7,19 +7,17 @@
 <h3>@ViewBag.Message</h3>
 
 <br />
-<p>This screen works with SPA and Layout</p>
-<br/>
+<p>This screen is setup like QTestPad, with a control that is defined and then referenced in custom bundled javascript.</p>
+<p>However we are not experiencing the same issue, both SPA and Layout work fine..</p>
+<br />
+
 
 @(Html.Kendo().DatePicker()
               .Name("datepicker")
               .Value("01/01/2011")
               .HtmlAttributes(new { style = "width: 100%", title = "datepicker" }))
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        console.warn("About Document Ready");
-        var datepicker = $("#datepicker").data("kendoDatePicker");
-        datepicker.value(new Date(2022, 02, 02));
-    });
-</script>
+
+@Scripts.Render("~/bundles/About2")
+
 

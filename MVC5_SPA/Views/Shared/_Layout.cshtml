@@ -29,7 +29,9 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("About2", "About2", "Home")</li>
+                    <li>@Html.ActionLink("About3", "About3", "Home")</li>
+                    <li>@Html.ActionLink("Contact (sleeped)", "Contact", "Home")</li>
                 </ul>
             </div>
         </div>
@@ -42,6 +44,12 @@
             </div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function () {
+            console.warn("Layout Document Ready");
+        });
+    </script>
 
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
