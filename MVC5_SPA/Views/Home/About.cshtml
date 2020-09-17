@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+
+<p>Kendo().DatePicker() test</p>
+
+@*@(Html.Kendo().DatePicker()
+              .Name("datepicker")
+              .Value("01/01/2011")
+              .HtmlAttributes(new { style = "width: 100%", title = "datepicker" })
+              .Deferred()
+    )*@
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        alert("About Document Ready");
+        var datepicker = $("#datepicker").data("kendoDatePicker");
+        datepicker.value(new Date(2022, 02, 02));
+    });
+    alert("test");
+</script>
+
+@*@Html.Kendo().DeferredScripts()*@
